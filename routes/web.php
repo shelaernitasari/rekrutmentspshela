@@ -14,6 +14,8 @@ Route::get('/services', 'ServicesController@index');
 Route::get('/services/create','ServicesController@create');
 Route::post('/services','ServicesController@store');
 Route::get('/viewservices', 'ServicesController@view');
+Route::get('/viewuser', 'ServicesController@viewuser');
+Route::get('/adduser', 'ServicesController@adduser');
 Route::get('/progresservices', 'ServicesController@lihatprogres');
 Route::get('/dashboard', 'ServicesController@lihatdashboard');
 Route::get('/viewservices/{id}/edit','ServicesController@edit');

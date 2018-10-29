@@ -11,11 +11,16 @@
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="id_role" class="col-md-4 control-label">ID Role</label>
 
                             <div class="col-md-6">
-                                <input id="id_role" type="text" class="form-control" name="id_role" >
+                                <input id="id_role" type="text" class="form-control" name="id_role" value="{{ old('id_role') }}" required>
+                                @if ($errors->has('id_role'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('id_role') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
@@ -69,11 +74,17 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('notelepon') ? ' has-error' : '' }}">
                             <label for="notelepon" class="col-md-4 control-label">No Telepon</label>
 
                             <div class="col-md-6">
-                                <input id="notelepon" type="text" class="form-control" name="notelepon">
+                                <input id="notelepon" type="text" class="form-control" name="notelepon" value="{{ old('notelepon') }}" required>
+
+                                @if ($errors->has('notelepon'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('notelepon') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 

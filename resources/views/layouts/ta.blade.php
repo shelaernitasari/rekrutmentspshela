@@ -49,7 +49,7 @@
 		</form>
 		<ul class="nav menu">
 			<li><a href="/viewservices"><em class="fa fa-bar-chart">&nbsp;</em> Perbaikan</a></li>
-			<li><a href="/adduser"><em class="fa fa-toggle-off">&nbsp;</em> Tambah User</a></li>
+			<li><a href="/viewuser"><em class="fa fa-toggle-off">&nbsp;</em> Tambah User</a></li>
 			
 			<li><a href="{{ route('logout') }}"
 				onclick="event.preventDefault();

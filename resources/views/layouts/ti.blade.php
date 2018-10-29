@@ -49,7 +49,7 @@
 		</form>
 		<ul class="nav menu">
 			<li><a href="/dashboard"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-			<li><a href="/progresservices"><em class="fa fa-bar-chart">&nbsp;</em> Perbaikan dan Kerusakan</a></li>
+			<li><a href="/progresservices"><em class="fa fa-bar-chart">&nbsp;</em> Progres </a></li>
 			
 			<li><a href="{{ route('logout') }}"
 				onclick="event.preventDefault();

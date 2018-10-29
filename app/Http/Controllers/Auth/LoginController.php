@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,7 +26,24 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/services';
+    // protected $redirectTo = '/services';
+    protected $redirectTo = '/';
+
+    protected function redirectTo()
+    {
+        $user=Auth::user();
+
+        if($user->id_role == 1){
+            return '/viewservices';
+        }elseif($user->id_role == 2){
+            return '/progresservices';
+        }elseif($user->id_role == 3){
+            return '/progresservices';
+        }elseif($user->id_role == 4){
+            return '/services';
+        }
+
+    }
 
     /**
      * Create a new controller instance.

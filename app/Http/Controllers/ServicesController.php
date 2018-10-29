@@ -35,9 +35,20 @@ class ServicesController extends Controller
         return view('pages.progresservices', compact('users'))->with('services', $services);
     }
 
+    public function viewuser()
+    {
+        $users= User::all();
+        return view('pages.viewuser', compact('users'));
+    }
+
+    public function adduser()
+    {
+        return view('auth.register');
+    }
+
     public function lihatdashboard()
     {
-        //
+        return view('pages.dashboard');
     }
     /**
      * Show the form for creating a new resource.
